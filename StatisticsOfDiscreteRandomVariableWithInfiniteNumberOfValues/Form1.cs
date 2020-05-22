@@ -12,29 +12,29 @@ namespace StatisticsOfDiscreteRandomVariableWithInfiniteNumberOfValues
 {
 	public partial class Form1 : Form
 	{
-		readonly NegativeBinomial NB;
+		readonly GeometricDistribution distribution;
 		public Form1()
 		{
 			InitializeComponent();
-			NB = new NegativeBinomial();
+			distribution = new GeometricDistribution();
 		}
 
 		private void StartButton_Click(object sender, EventArgs e)
 		{
-			NB.Start(param1Value.Value, (int)numberValue.Value);
+			distribution.Start(param1Value.Value, (int)numberValue.Value);
 
 			chart1.Series[0].Points.Clear();
-			for (int i = 0; i < NB.Probabilities.Length; i++)
+			for (int i = 0; i < distribution.Probabilities.Length; i++)
 			{
-				chart1.Series[0].Points.AddXY(i, NB.Probabilities[i]);
+				chart1.Series[0].Points.AddXY(i, distribution.Probabilities[i]);
 			}
 
-			average.Text = NB.Average.ToString("F3") + " (error = " + decimal.Round(NB.AverageError * 100) + "%)";
-			variance.Text = NB.Variance.ToString("F3") + " (error = " + decimal.Round(NB.VarianceError * 100) + "%)";
+			average.Text = distribution.Average.ToString("F3") + " (error = " + decimal.Round(distribution.AverageError * 100) + "%)";
+			variance.Text = distribution.Variance.ToString("F3") + " (error = " + decimal.Round(distribution.VarianceError * 100) + "%)";
 
-			chiSquared.Text = NB.ChiSquare.ToString("F3") + " <= " + NB.CriticalValue.ToString("F3") + " is ";
+			chiSquared.Text = distribution.ChiSquare.ToString("F3") + " <= " + distribution.CriticalValue.ToString("F3") + " is ";
 
-			if (NB.ChiSquareTest)
+			if (distribution.ChiSquareTest)
 			{
 				test.Text = "true";
 				test.ForeColor = Color.Green;

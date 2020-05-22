@@ -7,7 +7,7 @@ using MathNet.Numerics.Distributions;
 
 namespace StatisticsOfDiscreteRandomVariableWithInfiniteNumberOfValues
 {
-	public class NegativeBinomial
+	public class GeometricDistribution
 	{
 		const int m = 10;
 		Random random = new Random();

@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.startButton = new System.Windows.Forms.Button();
 			this.numberValue = new System.Windows.Forms.NumericUpDown();
@@ -45,6 +45,7 @@
 			this.variance = new System.Windows.Forms.Label();
 			this.chiSquared = new System.Windows.Forms.Label();
 			this.test = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numberValue)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.param1Value)).BeginInit();
@@ -53,6 +54,7 @@
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.startButton);
 			this.panel1.Controls.Add(this.numberValue);
 			this.panel1.Controls.Add(this.label6);
@@ -141,25 +143,25 @@
 			// 
 			// chart1
 			// 
-			chartArea2.AxisX.Minimum = 0D;
-			chartArea2.AxisY.Minimum = 0D;
-			chartArea2.Name = "ChartArea1";
-			this.chart1.ChartAreas.Add(chartArea2);
+			chartArea1.AxisX.Minimum = 0D;
+			chartArea1.AxisY.Minimum = 0D;
+			chartArea1.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea1);
 			this.chart1.Location = new System.Drawing.Point(307, 0);
 			this.chart1.Name = "chart1";
-			series2.BorderWidth = 2;
-			series2.ChartArea = "ChartArea1";
-			series2.Name = "Series1";
-			series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-			this.chart1.Series.Add(series2);
+			series1.BorderWidth = 2;
+			series1.ChartArea = "ChartArea1";
+			series1.Name = "Series1";
+			series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+			this.chart1.Series.Add(series1);
 			this.chart1.Size = new System.Drawing.Size(828, 361);
 			this.chart1.TabIndex = 1;
 			this.chart1.Text = "chart1";
-			title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-			title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			title2.Name = "Freq";
-			title2.Text = "freq.";
-			this.chart1.Titles.Add(title2);
+			title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+			title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			title1.Name = "Freq";
+			title1.Text = "freq.";
+			this.chart1.Titles.Add(title1);
 			// 
 			// label7
 			// 
@@ -227,6 +229,16 @@
 			this.test.Size = new System.Drawing.Size(0, 20);
 			this.test.TabIndex = 3;
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label2.Location = new System.Drawing.Point(12, 104);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(167, 20);
+			this.label2.TabIndex = 4;
+			this.label2.Text = "Geometric Distribution";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +281,7 @@
 		private System.Windows.Forms.Label variance;
 		private System.Windows.Forms.Label chiSquared;
 		private System.Windows.Forms.Label test;
+		private System.Windows.Forms.Label label2;
 	}
 }
 
